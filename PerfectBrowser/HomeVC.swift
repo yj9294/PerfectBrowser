@@ -108,7 +108,7 @@ extension HomeVC {
     
     @IBAction func shareAction() {
         hiddenSettingView()
-        var url = "https://itunes.apple.com/cn/app/id6446871195"
+        var url = "https://itunes.apple.com/cn/app/id6447507382"
         if !BrowserUtil.shared.item.isNavigation, let text = BrowserUtil.shared.item.webView.url?.absoluteString {
             url = text
         }
@@ -152,7 +152,7 @@ extension HomeVC {
     
     @IBAction func rateAction() {
         hiddenSettingView()
-        if let url = URL(string: "https://itunes.apple.com/cn/app/id6446871195") {
+        if let url = URL(string: "https://itunes.apple.com/cn/app/id6447507382") {
             UIApplication.shared.open(url)
         }
     }
