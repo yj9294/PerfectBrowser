@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,7 +25,7 @@
                     <items>
                         <navigationItem title="Privacy Policy" id="oHi-dg-6bs">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="8cI-OB-VqJ">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="640-dg-idO">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="640-dg-idO">
                                     <rect key="frame" x="16" y="3" width="87" height="38"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -40,7 +41,29 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t9b-nM-F1R">
                     <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <mutableString key="text">
+What information will we collect
+When you use our software, we collect usage data from you. This includes, but is not limited to, Internet service providers, device operating system versions, device make and model, language of the device.
+Contact information: The information you provided when contacting us, such as your email address.
+Crash logs, diagnostic data.
+How will we use this information
+Legal provisions
+Data analysis
+Advertising and Marketing
+Disclosure of information about
+We have third party partners and service providers who will collect your information as set forth in their privacy policies. If you need to, please visit the privacy policies of these third parties yourself
+The following are our third party partners.
+google play services：https://policies.google.com/privacy
+AdMob：https://support.google.com/admob
+Google Analytics for Firebase：https://firebase.google.com/policies/analytics
+Firebase Crashlytics：https://firebase.google.com/support/privacy/
+Facebook：https://www.facebook.com/about/privacy/update/printable
+Children's Privacy
+Our services are not directed to persons under the age of 18. 
+Update 
+We may update our privacy policy, and you can learn about the updates on this page
+Contact us
+support@guangpeng.link</mutableString>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

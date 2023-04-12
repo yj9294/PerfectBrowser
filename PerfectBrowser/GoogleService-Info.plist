@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1088795628198-o30gttkvb3ioqj3jpa8nssrfbbadq3eh.apps.googleusercontent.com</string>
+	<string>315486457248-gucg9mntiq763ug0pr6fe8fu2m8jpgc1.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1088795628198-o30gttkvb3ioqj3jpa8nssrfbbadq3eh</string>
+	<string>com.googleusercontent.apps.315486457248-gucg9mntiq763ug0pr6fe8fu2m8jpgc1</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCL352YPJ8yAhv-WelgAI8CMC0xbuJyJqU</string>
+	<string>AIzaSyAo6hHPnxsSkzq8scnGIu8dxXj-ysYrD84</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1088795628198</string>
+	<string>315486457248</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.testbird.spark.2</string>
+	<string>com.perfectt.bbrowsers</string>
 	<key>PROJECT_ID</key>
-	<string>testbird-f2fe7</string>
+	<string>perfect-browser-df85b</string>
 	<key>STORAGE_BUCKET</key>
-	<string>testbird-f2fe7.appspot.com</string>
+	<string>perfect-browser-df85b.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1088795628198:ios:52ec35ee7ed596e92dda67</string>
+	<string>1:315486457248:ios:a7531b7082e2ec3625e8c5</string>
 </dict>
 </plist>
