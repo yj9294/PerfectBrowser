@@ -9,6 +9,7 @@ import UIKit
 import WebKit
 import AppTrackingTransparency
 import MobileCoreServices
+import IQKeyboardManagerSwift
 
 class HomeVC: UIViewController {
     
@@ -23,14 +24,18 @@ class HomeVC: UIViewController {
     @IBOutlet weak var contentView: UIView!
     
     @IBOutlet weak var settingView: UIView!
-    
     @IBOutlet weak var cleanView: UIView!
+    @IBOutlet weak var adView: GADNativeView!
+    
+    var viewWillAppear = false
     
     var date: Date = Date()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addADObserver()
         collection.register(UINib(nibName: "HomeItemCell", bundle: .main), forCellWithReuseIdentifier: "HomeItemCell")
+        IQKeyboardManager.shared.enable = true
         Task{
             if !Task.isCancelled {
                 try await Task.sleep(nanoseconds: 2_000_000_000)
@@ -44,11 +49,16 @@ class HomeVC: UIViewController {
         BrowserUtil.shared.addedWebView(from: self)
         refreshStatus()
         FirebaseUtil.log(event: .homeShow)
+        viewWillAppear = true
+        GADUtil.share.load(.interstitial)
+        GADUtil.share.load(.native)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         BrowserUtil.shared.removeWebView()
+        viewWillAppear = false
+        GADUtil.share.disappear(.native)
     }
     
     override func viewDidLayoutSubviews() {
@@ -189,6 +199,22 @@ extension HomeVC {
 
 extension HomeVC {
     
+    func addADObserver() {
+        NotificationCenter.default.addObserver(forName: .nativeUpdate, object: nil, queue: .main) { [weak self] noti in
+            guard let self = self else { return }
+            if let ad = noti.object as? NativeADModel, self.viewWillAppear == true {
+                if Date().timeIntervalSince1970 - (GADUtil.share.homeNativeAdImpressionDate ?? Date(timeIntervalSinceNow: -11)).timeIntervalSince1970 > 10 {
+                    self.adView.nativeAd = ad.nativeAd
+                    GADUtil.share.homeNativeAdImpressionDate = Date()
+                } else {
+                    NSLog("[ad] 10s home 原生广告刷新或数据填充间隔.")
+                }
+            } else {
+                self.adView.nativeAd = nil
+            }
+        }
+    }
+    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         DispatchQueue.main.async {
             self.refreshStatus()
@@ -230,7 +256,7 @@ extension HomeVC {
     
 }
 
-extension HomeVC: UIScrollViewDelegate, WKUIDelegate, WKNavigationDelegate {
+extension HomeVC: UIScrollViewDelegate, UITextFieldDelegate, WKUIDelegate, WKNavigationDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchAction()

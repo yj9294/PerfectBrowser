@@ -5,14 +5,14 @@
             "key": "interstitial",
             "value": [{
                 "theAdPriority": 1,
-                "theAdID": "ca-app-pub-2428956319321532/4922500445"
+                "theAdID": "ca-app-pub-9570756656459013/9234264057"
             }]
         },
         {
             "key": "native",
             "value": [{
                 "theAdPriority": 1,
-                "theAdID": "a-app-pub-2428956319321532/3609418774"
+                "theAdID": "ca-app-pub-9570756656459013/9593356703"
             }]
         }
     ]

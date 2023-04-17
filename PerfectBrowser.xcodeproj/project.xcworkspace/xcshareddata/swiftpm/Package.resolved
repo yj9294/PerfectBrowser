@@ -55,6 +55,24 @@
       }
     },
     {
+      "identity" : "googlemobileads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/quanghits/GoogleMobileAds",
+      "state" : {
+        "revision" : "271e6d6bc1d7756a88fe82df558145a264a34331",
+        "version" : "9.8.0"
+      }
+    },
+    {
+      "identity" : "googleusermessagingplatform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/quanghits/GoogleUserMessagingPlatform.git",
+      "state" : {
+        "revision" : "f322d91b6b0497b727b228a5fa5b9394e7886d3a",
+        "version" : "2.0.0"
+      }
+    },
+    {
       "identity" : "googleutilities",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleUtilities.git",
@@ -79,6 +97,15 @@
       "state" : {
         "revision" : "5ccda3981422a84186387dbb763ba739178b529c",
         "version" : "2.3.0"
+      }
+    },
+    {
+      "identity" : "iqkeyboardmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardManager.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "0ea3febb36cfcec2afb5841fd8809a9c0fa545b3"
       }
     },
     {

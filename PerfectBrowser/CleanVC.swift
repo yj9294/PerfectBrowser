@@ -9,6 +9,11 @@ import UIKit
 
 class CleanVC: UIViewController {
     
+    lazy var timer: DispatchSourceTimer = {
+        let timer = DispatchSource.makeTimerSource()
+        return timer
+    }()
+    
     @IBOutlet weak var animationView: UIImageView!
     
     var completionHandle:(()->Void)? = nil
@@ -18,15 +23,7 @@ class CleanVC: UIViewController {
         view.backgroundColor = .white
         starAnimation()
         BrowserUtil.shared.clean(from: self)
-        Task {
-            if !Task.isCancelled {
-                try await Task.sleep(nanoseconds: 2_000_000_000)
-                self.dismiss(animated: true) {
-                    self.completionHandle?()
-                }
-                stopAnimation()
-            }
-        }
+        launching()
     }
     
     func starAnimation() {
@@ -40,6 +37,41 @@ class CleanVC: UIViewController {
     
     func stopAnimation() {
         animationView.layer.removeAllAnimations()
+    }
+    
+    func launching() {
+        var progress = 0.0
+        var duration = 16.0
+        let adTime = 2.5
+        timer.schedule(deadline: .now(), repeating: 0.01)
+        timer.setEventHandler {
+            DispatchQueue.main.async {
+                debugPrint(progress)
+                progress += 0.01 / duration
+                
+                if progress > (adTime / duration), GADUtil.share.isLoaded(.interstitial) {
+                    duration = 0.1
+                }
+                if progress > 1.0 {
+                    self.timer.cancel()
+                    GADUtil.share.show(.interstitial, from: self) { _ in
+                        Task {
+                            if !Task.isCancelled {
+                                try await Task.sleep(nanoseconds: 500_000_000)
+                                self.dismiss(animated: true) {
+                                    self.completionHandle?()
+                                }
+                                self.stopAnimation()
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        timer.resume()
+        GADUtil.share.load(.interstitial)
+        GADUtil.share.load(.native)
     }
     
 

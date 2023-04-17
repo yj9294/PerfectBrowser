@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FBSDKCoreKit
+import IQKeyboardManagerSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -40,6 +41,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         FirebaseApp.configure()
+        
+        GADUtil.share.requestRemoteConfig()
 
     }
 
@@ -71,6 +74,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if enterbackground {
             enterbackground = false
             FirebaseUtil.log(event: .openHot)
+        }
+        if let vc = window?.rootViewController, let presentedVC = vc.presentedViewController {
+            presentedVC.dismiss(animated: true)
         }
     }
 

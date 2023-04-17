@@ -37,7 +37,13 @@
 		C7142C0129E54365001CF262 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C7142C0029E54365001CF262 /* FirebaseAnalytics */; };
 		C7142C0329E54365001CF262 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = C7142C0229E54365001CF262 /* FirebaseCrashlytics */; };
 		C7142C0529E54365001CF262 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = C7142C0429E54365001CF262 /* FirebaseRemoteConfig */; };
-		C732EFCD29E6811C0093CD88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C732EFCC29E6811C0093CD88 /* GoogleService-Info.plist */; };
+		C732EFE329E8F33B0093CD88 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = C732EFE229E8F33B0093CD88 /* GoogleMobileAds */; };
+		C732EFE529E8F49A0093CD88 /* GADUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C732EFE429E8F49A0093CD88 /* GADUtil.swift */; };
+		C732EFE729E8F4F90093CD88 /* GADUtilExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C732EFE629E8F4F90093CD88 /* GADUtilExt.swift */; };
+		C732EFEB29E929C50093CD88 /* GADConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = C732EFEA29E929C50093CD88 /* GADConfig.json */; };
+		C732EFED29E9337A0093CD88 /* GADNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C732EFEC29E9337A0093CD88 /* GADNativeView.swift */; };
+		C7D6F4AE29ED2E3D00045FCC /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C7D6F4AD29ED2E3D00045FCC /* IQKeyboardManagerSwift */; };
+		C7D6F4B029ED319C00045FCC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7D6F4AF29ED319C00045FCC /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +73,11 @@
 		C7142BF229E537DE001CF262 /* CleanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanVC.swift; sourceTree = "<group>"; };
 		C7142BF329E537DE001CF262 /* CleanVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CleanVC.xib; sourceTree = "<group>"; };
 		C7142BF629E540D8001CF262 /* FirebaseUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtil.swift; sourceTree = "<group>"; };
-		C732EFCC29E6811C0093CD88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C732EFE429E8F49A0093CD88 /* GADUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADUtil.swift; sourceTree = "<group>"; };
+		C732EFE629E8F4F90093CD88 /* GADUtilExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADUtilExt.swift; sourceTree = "<group>"; };
+		C732EFEA29E929C50093CD88 /* GADConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GADConfig.json; sourceTree = "<group>"; };
+		C732EFEC29E9337A0093CD88 /* GADNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADNativeView.swift; sourceTree = "<group>"; };
+		C7D6F4AF29ED319C00045FCC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +86,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7142BFA29E5418B001CF262 /* FacebookAEM in Frameworks */,
+				C7D6F4AE29ED2E3D00045FCC /* IQKeyboardManagerSwift in Frameworks */,
 				C7142BFE29E5418B001CF262 /* FacebookCore in Frameworks */,
 				C7142C0329E54365001CF262 /* FirebaseCrashlytics in Frameworks */,
 				C7142C0529E54365001CF262 /* FirebaseRemoteConfig in Frameworks */,
 				C7142C0129E54365001CF262 /* FirebaseAnalytics in Frameworks */,
 				C7142BFC29E5418B001CF262 /* FacebookBasics in Frameworks */,
+				C732EFE329E8F33B0093CD88 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +123,9 @@
 				C7142BC729E3E09C001CF262 /* AppUtil.swift */,
 				C7142BD129E4000F001CF262 /* BrowserUtil.swift */,
 				C7142BF629E540D8001CF262 /* FirebaseUtil.swift */,
+				C732EFE429E8F49A0093CD88 /* GADUtil.swift */,
+				C732EFE629E8F4F90093CD88 /* GADUtilExt.swift */,
+				C732EFEC29E9337A0093CD88 /* GADNativeView.swift */,
 				C7142BC329E3D8D8001CF262 /* LaunchVC.swift */,
 				C7142BC429E3D8D8001CF262 /* LaunchVC.xib */,
 				C7142BC929E3E1BC001CF262 /* HomeVC.swift */,
@@ -126,10 +141,11 @@
 				C7142BE629E5006B001CF262 /* ListCell.swift */,
 				C7142BE729E5006B001CF262 /* ListCell.xib */,
 				C7142BCD29E3F19C001CF262 /* HomeItemCell.swift */,
+				C732EFEA29E929C50093CD88 /* GADConfig.json */,
+				C7D6F4AF29ED319C00045FCC /* GoogleService-Info.plist */,
 				C7142BCE29E3F19C001CF262 /* HomeItemCell.xib */,
 				C7142BB529E3D74E001CF262 /* Main.storyboard */,
 				C7142BB829E3D750001CF262 /* Assets.xcassets */,
-				C732EFCC29E6811C0093CD88 /* GoogleService-Info.plist */,
 				C7142BBA29E3D750001CF262 /* LaunchScreen.storyboard */,
 				C7142BBD29E3D750001CF262 /* Info.plist */,
 			);
@@ -159,6 +175,8 @@
 				C7142C0029E54365001CF262 /* FirebaseAnalytics */,
 				C7142C0229E54365001CF262 /* FirebaseCrashlytics */,
 				C7142C0429E54365001CF262 /* FirebaseRemoteConfig */,
+				C732EFE229E8F33B0093CD88 /* GoogleMobileAds */,
+				C7D6F4AD29ED2E3D00045FCC /* IQKeyboardManagerSwift */,
 			);
 			productName = PerfectBrowser;
 			productReference = C7142BAC29E3D74E001CF262 /* PerfectBrowser.app */;
@@ -191,6 +209,8 @@
 			packageReferences = (
 				C7142BF829E5418B001CF262 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				C7142BFF29E54364001CF262 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C732EFE129E8F33B0093CD88 /* XCRemoteSwiftPackageReference "GoogleMobileAds" */,
+				C7D6F4AC29ED2E3D00045FCC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = C7142BAD29E3D74E001CF262 /* Products */;
 			projectDirPath = "";
@@ -206,18 +226,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7D6F4B029ED319C00045FCC /* GoogleService-Info.plist in Resources */,
 				C7142BBC29E3D750001CF262 /* LaunchScreen.storyboard in Resources */,
 				C7142BE929E5006B001CF262 /* ListCell.xib in Resources */,
 				C7142BC629E3D8D8001CF262 /* LaunchVC.xib in Resources */,
 				C7142BE329E4F204001CF262 /* ListVC.xib in Resources */,
 				C7142BF129E52F43001CF262 /* TermsVC.xib in Resources */,
-				C732EFCD29E6811C0093CD88 /* GoogleService-Info.plist in Resources */,
 				C7142BCC29E3E1BC001CF262 /* HomeVC.xib in Resources */,
 				C7142BD029E3F19C001CF262 /* HomeItemCell.xib in Resources */,
 				C7142BF529E537DE001CF262 /* CleanVC.xib in Resources */,
 				C7142BB929E3D750001CF262 /* Assets.xcassets in Resources */,
 				C7142BB729E3D74E001CF262 /* Main.storyboard in Resources */,
 				C7142BED29E52D9F001CF262 /* PrivacyVC.xib in Resources */,
+				C732EFEB29E929C50093CD88 /* GADConfig.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,13 +254,16 @@
 				C7142BF729E540D8001CF262 /* FirebaseUtil.swift in Sources */,
 				C7142BCB29E3E1BC001CF262 /* HomeVC.swift in Sources */,
 				C7142BB029E3D74E001CF262 /* AppDelegate.swift in Sources */,
+				C732EFE729E8F4F90093CD88 /* GADUtilExt.swift in Sources */,
 				C7142BD229E4000F001CF262 /* BrowserUtil.swift in Sources */,
 				C7142BE229E4F204001CF262 /* ListVC.swift in Sources */,
 				C7142BCF29E3F19C001CF262 /* HomeItemCell.swift in Sources */,
 				C7142BF029E52F43001CF262 /* TermsVC.swift in Sources */,
 				C7142BE829E5006B001CF262 /* ListCell.swift in Sources */,
 				C7142BEC29E52D9F001CF262 /* PrivacyVC.swift in Sources */,
+				C732EFED29E9337A0093CD88 /* GADNativeView.swift in Sources */,
 				C7142BB229E3D74E001CF262 /* SceneDelegate.swift in Sources */,
+				C732EFE529E8F49A0093CD88 /* GADUtil.swift in Sources */,
 				C7142BC829E3E09C001CF262 /* AppUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,9 +409,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 59CN4J44AC;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PerfectBrowser/Info.plist;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
@@ -403,8 +427,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.testbird.perfectbrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perfectt.bbrowsers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -419,9 +444,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 59CN4J44AC;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PerfectBrowser/Info.plist;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
@@ -437,8 +462,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.testbird.perfectbrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perfectt.bbrowsers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -488,6 +514,22 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		C732EFE129E8F33B0093CD88 /* XCRemoteSwiftPackageReference "GoogleMobileAds" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanghits/GoogleMobileAds";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		C7D6F4AC29ED2E3D00045FCC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -520,6 +562,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C7142BFF29E54364001CF262 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
+		};
+		C732EFE229E8F33B0093CD88 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C732EFE129E8F33B0093CD88 /* XCRemoteSwiftPackageReference "GoogleMobileAds" */;
+			productName = GoogleMobileAds;
+		};
+		C7D6F4AD29ED2E3D00045FCC /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7D6F4AC29ED2E3D00045FCC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

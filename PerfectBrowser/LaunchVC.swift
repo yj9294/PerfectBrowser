@@ -44,19 +44,32 @@ extension LaunchVC {
     
     func launching() {
         progress = 0
-        duration = 3
+        duration = 16
+        let adTime = 2.5
         timer.schedule(deadline: .now(), repeating: 0.01)
         timer.setEventHandler {
             DispatchQueue.main.async {
-                self.progress += 0.01 / self.duration
+                debugPrint(self.progress)
+                self.progress += (0.01 / self.duration)
+                
+                if self.progress > (adTime / self.duration), GADUtil.share.isLoaded(.interstitial) {
+                    self.duration = 0.1
+                }
             }
         }
         timer.resume()
+        GADUtil.share.load(.interstitial)
+        GADUtil.share.load(.native)
     }
     
     func launched() {
+        progress = 0.0
         timer.suspend()
-        launchedHandle?()
+        GADUtil.share.show(.interstitial) { _ in
+            if self.progress == 0.0 {
+                self.launchedHandle?()
+            }
+        }
     }
     
 }

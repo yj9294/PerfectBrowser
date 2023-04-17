@@ -7,6 +7,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
